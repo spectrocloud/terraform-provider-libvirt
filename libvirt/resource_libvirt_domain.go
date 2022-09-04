@@ -102,7 +102,7 @@ func resourceLibvirtDomain() *schema.Resource {
 			"cloudinit": {
 				Type:     schema.TypeString,
 				Optional: true,
-				ForceNew: false,
+				ForceNew: true,
 			},
 			"coreos_ignition": {
 				Type:     schema.TypeString,
