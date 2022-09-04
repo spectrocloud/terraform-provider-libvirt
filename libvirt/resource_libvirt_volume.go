@@ -332,6 +332,7 @@ func resourceLibvirtVolumeRead(d *schema.ResourceData, meta interface{}) error {
 		log.Printf("[DEBUG] Volume %s format: %s", volume.Name, volumeDef.Target.Format.Type)
 		d.Set("format", volumeDef.Target.Format.Type)
 	}
+	d.Set("format", "qcow2")
 
 	return nil
 }
